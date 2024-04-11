@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive and Accessible Production Entry Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro-container">
+            <h1>Welcome to the Production Entry Form</h1>
+            <p>Please fill out the form to submit your production details. Ensure all required fields are completed accurately. Thank you!</p>
+        </div>
+
+        <div class="form-container" id="protectedForm">
+            <form id="productionForm" action="https://formspree.io/f/xwkgrwjj" method="POST" enctype="multipart/form-data">
+                <!-- Fields for the person completing the form -->
+                <label for="completerName">Your Name:</label>
+                <input type="text" id="completerName" name="completerName" required>
+
+                <label for="completerEmail">Your Email:</label>
+                <input type="email" id="completerEmail" name="completerEmail" required>
+
+                <fieldset>
+                    <legend>Production Information</legend>
+                    <label for="woodQuantity">Wood Quantity (sq ft):</label>
+                    <input type="number" id="woodQuantity" name="woodQuantity" step="0.1" required>
+
+                    <label for="costPerSqFt">Cost Per Square Foot:</label>
+                    <input type="number" id="costPerSqFt" name="costPerSqFt" step="0.01" required>
+
+                    <label for="materialUsed">Item name and other materials used:</label>
+                    <input type="text" id="materialUsed" name="materialUsed">
+
+                    <label for="laborHours">Labor Hours:</label>
+                    <input type="number" id="laborHours" name="laborHours" step="0.1" required>
+
+                    <label for="itemImage">Item Image:</label>
+                    <input type="file" id="itemImage" name="itemImage" accept="image/*" required>
+
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
